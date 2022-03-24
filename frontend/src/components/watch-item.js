@@ -4,6 +4,9 @@ import {createElement, render} from "@/utils/render";
 const getTemplate = ({model_number, model_case, water_resistance, large_title, movement, caliber, description, price}) => {
   const imgName = `${model_number}.png`;
   return `<div class="row">
+<div class="col-sm-1 col-md-6 order-md-last">
+ <img class="img-fluid" src="${imgDir}/${imgName}" alt="image">
+</div>
 <div class="col-sm-1 col-md-6">
  <p><span class="text-uppercase fw-bold">Model case</span><br/>${model_case}</p>
  <p><span class="text-uppercase fw-bold">Water resistance</span><br/>${water_resistance}</p>
@@ -13,9 +16,7 @@ const getTemplate = ({model_number, model_case, water_resistance, large_title, m
  <p><span class="text-uppercase fw-bold">Description</span><br/>${description}</p>
  <p><span class="text-uppercase fw-bold">Price</span><br/>${price}</p>
 </div>
-<div class="col-sm-1 col-md-6">
- <img class="img-fluid" src="${imgDir}/${imgName}" alt="image">
-</div>
+
 </div>`;
 }
 
